@@ -23,15 +23,30 @@
     </div>
     <a-scene embedded arjs vr-mode-ui="enabled: false">
         <a-assets>
+            <img id="aws" src="images\aws.png">
+            <img id="unity" src="images\unity.jpg">
+            <img id="vr" src="images\vr.png">
+            <img id="laravel" src="images\laravel.png">
+            <img id="ios" src="images\ios.png">
+            <img id="android" src="images\android.png">
+            <img id="3ds" src="images\3dsmax.png">
+            <img id="react" src="images\React.png">
             <audio id="bgm" src="sounds\bgm.mp3" preload="auto"></audio>
             <a-asset-item id="model" src="models\smol_ame_in_an_upcycled_terrarium_hololiveen.glb"></a-asset-item>
         </a-assets>
 
         </audio>
         <a-marker type="pattern" preset="custom" url="marker/onetech-qr.patt" registerevents>
-            <!-- <a-box position="0 0 0" material="color: red; transparent: true; opacity: 0.50;"></a-box> -->
-            <a-entity gltf-model="#model" position="0 0 0" scale="0.5 0.5 0.5" rotation="-40 0 0" animation-mixer
-                        sound="src: #bgm"></a-entity>
+            <a-entity gltf-model="#model" position="0 0 0" scale="0.5 0.5 0.5" rotation="-40 0 0" animation-mixer sound="src: #bgm; loop: true">
+                <a-image src="#aws" random-animation="size: 0.5"></a-image>
+                <a-image src="#unity" random-animation="size: 0.2"></a-image>
+                <a-image src="#ios"  random-animation="size: 0.2"> </a-image>
+                <a-image src="#android" random-animation="size: 0.2"></a-image>
+                <a-image src="#vr" random-animation="size: 0.2"></a-image>
+                <a-image src="#3ds" random-animation="size: 0.5"></a-image>
+                <a-image src="#laravel" random-animation="size: 0.4"></a-image>
+                <a-image src="#react"random-animation="size: 0.2"></a-image>
+            </a-entity>
         </a-marker>
         <a-entity camera></a-entity>
     </a-scene>
