@@ -14,14 +14,13 @@ AFRAME.registerComponent('registerevents', {
             var alert = document.getElementById("alert")
             alert.style.visibility = 'hidden'
 
-            var bgm = document.getElementById('bgm')
-            bgm.play()
+            var bgm = document.querySelector('[sound]')
+            bgm.components.sound.playSound()
         });
 
         marker.addEventListener('markerLost', function() {
-            var bgm = document.getElementById('bgm')
-            bgm.pause()
-            bgm.currentTime = 0;
+            var bgm = document.querySelector('[sound]')
+            bgm.components.sound.stopSound()
         });
     }
 });
