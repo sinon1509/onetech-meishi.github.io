@@ -11,18 +11,22 @@
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <script src="aframe-extras-6.1.1.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <script src="app.js"></script>
 </head>
 <body style="margin: 0px; overflow: hidden">
     <div id="root">
         <button type="button" onclick="window.open('https://www.youtube.com/@onetechasia3139/videos', '_blank'); return false;" class="btn btn-danger"><i class="bi bi-youtube">Youtube</i></button>
         <button type="button" onclick="window.open('https://onetech.jp', '_blank'); return false;" class="btn btn-primary"><i class="bi bi-house-fill">Home</i></button>
 	</div>
+    <div id="alert">
+        <p>QRコードを読んでくだい。</p>
+    </div>
     <a-scene embedded arjs vr-mode-ui="enabled: false">
         <a-assets>
             <a-asset-item id="model" src="models\smol_ame_in_an_upcycled_terrarium_hololiveen.glb"></a-asset-item>
         </a-assets>
 
-        <a-marker type="pattern" preset="custom" url="marker/onetech-qr.patt" marker-event>
+        <a-marker type="pattern" preset="custom" url="marker/onetech-qr.patt" registerevents>
             <!-- <a-box position="0 0 0" material="color: red; transparent: true; opacity: 0.50;"></a-box> -->
             <a-entity gltf-model="#model" position="0 0 0" scale="0.5 0.5 0.5" animation-mixer></a-entity>
         </a-marker>
