@@ -13,6 +13,15 @@ AFRAME.registerComponent('registerevents', {
 
             var alert = document.getElementById("alert")
             alert.style.visibility = 'hidden'
+
+            var bgm = document.getElementById('bgm')
+            bgm.play()
+        });
+
+        marker.addEventListener('markerLost', function() {
+            var bgm = document.getElementById('bgm')
+            bgm.pause()
+            bgm.currentTime = 0;
         });
     }
 });
