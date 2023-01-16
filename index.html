@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONETECH名刺</title>
+    <link rel="stylesheet" href="style.css"></link>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <!--    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>-->
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+    <div id="root">
+        <button type="button" onclick="window.open('https://www.youtube.com/@onetechasia3139/videos', '_blank'); return false;" class="btn btn-danger"><i class="bi bi-youtube">Youtube</i></button>
+        <button type="button" onclick="window.open('https://onetech.jp', '_blank'); return false;" class="btn btn-primary"><i class="bi bi-house-fill">Home</i></button>
+	</div>
+    <a-scene embedded arjs vr-mode-ui="enabled: false"  webxr="overlayElement:#dom-overlay;">
+        <a-marker type="pattern" preset="custom" url="marker/onetech-marker.patt" marker-event>
+            <a-box position="0 0 0" material="color: red; transparent: true; opacity: 0.50;">
+            </a-box>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
