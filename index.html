@@ -36,8 +36,7 @@
         </a-assets>
 
         </audio>
-        <a-marker type="pattern" preset="custom" url="marker/onetech-qr.patt" registerevents>
-            <a-entity gltf-model="#model" position="0 0 0" scale="1 1 1" rotation="-40 0 0" animation-mixer sound="src: #bgm; loop: true">
+        <a-marker type="pattern" preset="custom" url="marker/onetech-qr.patt" marker-anchor>
                 <!-- <a-image src="#aws" random-animation="size: 0.5"></a-image>
                 <a-image src="#unity" random-animation="size: 0.2"></a-image>
                 <a-image src="#ios"  random-animation="size: 0.2"> </a-image>
@@ -46,8 +45,12 @@
                 <a-image src="#3ds" random-animation="size: 0.5"></a-image>
                 <a-image src="#laravel" random-animation="size: 0.4"></a-image>
                 <a-image src="#react"random-animation="size: 0.2"></a-image> -->
-            </a-entity>
         </a-marker>
+        <a-light type="directional" light="castShadow:true;" position="1 1 5" intensity="1" shadow-camera-automatic="#character"></a-light>
+        <a-entity id="character" gltf-model="#model" position="0 0 0" scale="1 1 1" rotation="0 0 0" animation-mixer shadow="cast:true; receive:false">
+        </a-entity>
+        <a-plane id="plane" color="#7BC8A4" rotation="-90 0 0" scale="5 5 5" shadow="receive: true; cast:false" material="shader:shadow"></a-plane>
+        <a-sound id="my_sound01" src="#bgm" autoplay="false" loop="true"></a-sound>
         <a-entity camera="far:100000; near:0.01"></a-entity>
     </a-scene>
 </body>
