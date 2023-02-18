@@ -21,7 +21,7 @@
     <div id="alert">
         <p>QRコードを読んでくだい。</p>
     </div>
-    <a-scene embedded arjs vr-mode-ui="enabled: false">
+    <a-scene embedded arjs vr-mode-ui="enabled: false"  renderer='logarithmicDepthBuffer: true;'>
         <a-assets>
             <img id="aws" src="images\aws.png">
             <img id="unity" src="images\unity.jpg">
@@ -32,7 +32,7 @@
             <img id="3ds" src="images\3dsmax.png">
             <img id="react" src="images\React.png">
             <audio id="bgm" src="sounds\fun-life-112188.mp3" preload="auto"></audio>
-            <a-asset-item id="model" src="models\kawamoto_glb_anim.glb"></a-asset-item>
+            <a-asset-item id="model" src="models\nghia.glb"></a-asset-item>
         </a-assets>
 
         </audio>
@@ -48,7 +48,7 @@
                 <a-image src="#react"random-animation="size: 0.2"></a-image> -->
             </a-entity>
         </a-marker>
-        <a-entity camera></a-entity>
+        <a-entity camera="far:100000; near:0.01"></a-entity>
     </a-scene>
 </body>
 </html>
