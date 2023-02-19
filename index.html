@@ -33,6 +33,7 @@
             <img id="react" src="images\React.png"> -->
             <audio id="bgm" src="sounds\fun-life-112188.mp3" preload="auto"></audio>
             <a-asset-item id="model" src="models\nghia.glb"></a-asset-item>
+            <a-asset-item id="speaker" src="models\speaker.glb"></a-asset-item>
         </a-assets>
 
         </audio>
@@ -49,6 +50,8 @@
         <a-light type="directional" light="castShadow:true;" position="1 1 5" intensity="1" shadow-camera-automatic="#character"></a-light>
         <a-entity id="character" gltf-model="#model" position="0 0 0" scale="1 1 1" rotation="0 0 0" animation-mixer shadow="cast:true; receive:false">
             <a-entity light="type: point; intensity: 0.5; distance: 10; decay: 2" position="0 1.3 1"></a-entity>
+            <a-entity gltf-model="#speaker" scale="0.5 0.5 0.5" position="2 0 0" rotation="0 45 0"></a-entity>
+            <a-entity gltf-model="#speaker" scale="0.5 0.5 0.5" position="-2 0 0" rotation="0 135 0"></a-entity>
         </a-entity>
         <a-plane id="plane" color="#7BC8A4" rotation="-90 0 0" scale="5 5 5" shadow="receive: true; cast:false" material="shader:shadow"></a-plane>
         <a-sound id="my_sound01" src="#bgm" autoplay="false" loop="true"></a-sound>
