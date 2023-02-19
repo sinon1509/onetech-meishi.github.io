@@ -19,18 +19,18 @@ AFRAME.registerComponent('marker-anchor', {
                 bgm.components.sound.playSound()
             }
 
-            var character = document.getElementById("character")
-            var plane = document.getElementById("plane")
-            var marker = document.querySelector('a-marker')
-            var position = marker.getAttribute('position')
-            var rotation = marker.getAttribute('rotation')
-            character.setAttribute('position', position)
-            character.setAttribute('rotation', rotation)
+            // var character = document.getElementById("character")
+            // var plane = document.getElementById("plane")
+            // var marker = document.querySelector('a-marker')
+            // var position = marker.getAttribute('position')
+            // var rotation = marker.getAttribute('rotation')
+            // character.setAttribute('position', position)
+            // character.setAttribute('rotation', rotation)
 
-            var planeRotation = rotation;
-            planeRotation.x = rotation.x - 90;
-            plane.setAttribute('position', position)
-            plane.setAttribute('rotation', rotation)
+            // var planeRotation = rotation;
+            // planeRotation.x = rotation.x - 90;
+            // plane.setAttribute('position', position)
+            // plane.setAttribute('rotation', rotation)
             isPlaying = true;
         });
     },
